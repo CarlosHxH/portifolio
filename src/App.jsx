@@ -42,52 +42,21 @@ const projetos = () => (
   </div>
 );
 const contato = () => {
+  const Card = ({img,title,subtitle, href})=>(
+  <div className="w-full text-center">
+      <img className="mx-auto rounded-full bg-gray-600 p-4" src={img} alt=""/>
+      <a href={href} target="_black" rel="noopener noreferrer">
+        <p>{title}</p>
+        <p>{subtitle}</p>
+      </a>
+    </div>
+  )
   return (
-    <div className="flex gap-4 text-white justify-around mb-10">
-      <div className="text-center">
-        <img
-          className="mx-auto rounded-full bg-gray-600 p-4"
-          src={"icons/mail.svg"}
-          alt=""
-        />
-        <a href="mailto:carlosdaniel.prog@gmail.com" target="_black" rel="noopener noreferrer">
-          <p>E-mail</p>
-          <p>carlosdaniel.prog@gmail.com</p>
-        </a>
-      </div>
-      <div className="text-center">
-        <img
-          className="mx-auto rounded-full bg-gray-600 p-4"
-          src={"icons/phone.svg"}
-          alt=""
-        />
-        <a href="https://wa.me/5565992969922" target="_black" rel="noopener noreferrer">
-          <p>Telefone</p>
-          <p>(65) 99296-9922</p>
-        </a>
-      </div>
-      <div className="text-center">
-        <img
-          className="mx-auto rounded-full bg-gray-600 p-4"
-          src={"icons/linkedin.svg"}
-          alt=""
-        />
-        <a href="https://www.linkedin.com/in/carlos-daniel-alves-dias-27a313112/" target="_black" rel="noopener noreferrer">
-          <p>Linkedin</p>
-          <p>@carlos-daniel-alves-dias-27a31311</p>
-        </a>
-      </div>
-      <div className="text-center">
-        <img
-          className="mx-auto rounded-full bg-gray-600 p-4"
-          src={"icons/github.svg"}
-          alt=""
-        />
-        <a href="https://github.com/CarlosHxH/" target="_black" rel="noopener noreferrer">
-          <p>GitHub</p>
-          <p>@CarlosHxH</p>
-        </a>
-      </div>
+    <div className="grid grid-rows-2 grid-flow-col gap-4 text-white">
+      <Card img={"icons/mail.svg"} title={'E-mail'} subtitle={'carlosdaniel.prog@gmail.com'} href={"mailto:carlosdaniel.prog@gmail.com"}/>
+      <Card img={"icons/phone.svg"} title={'E-mail'} subtitle={'(65) 99296-9922'} href="https://wa.me/5565992969922"/>
+      <Card img={"icons/linkedin.svg"} title={'Linkedin'} subtitle={'@carlos-daniel-alves-dias-27a31311'} href="https://www.linkedin.com/in/carlos-daniel-alves-dias-27a313112/"/>
+      <Card img={"icons/github.svg"} title={'GitHub'} subtitle={'@CarlosHxH'} href="https://github.com/CarlosHxH/"/>
     </div>
   );
 };

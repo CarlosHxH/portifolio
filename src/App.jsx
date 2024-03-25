@@ -9,9 +9,9 @@ const sobre = () => {
         <p className="text-xl">Desenvolvedor Front-end.</p>
       </div>
 
-      <div className="mt-5">
+      <div className="mt-5 text-center mx-auto">
         <p className="text-xl mb-4">Sobre mim </p>
-        <p>
+        <p className="w-[400px] mx-auto">
           Desenvolvedor Front-end com experiência em React.js, Next.js, Redux,
           JavaScript, TypeScript, Styled Components, Material UI, laravel e
           consumo de APIs REST. Apaixonado pelo desenvolvimento de componentes
@@ -120,7 +120,7 @@ const skils = () => (
 );
 
 const Banner = ({ title, img, href }) => (
-  <div className="block text-white p-5">
+  <div className="block text-white p-[20px]">
     <div className="hover:scale-125 ease-in duration-300">
       <p className="italic">{title}</p>
       <a className="link" href={href} target="_blank" rel="noopener noreferrer">
@@ -129,6 +129,7 @@ const Banner = ({ title, img, href }) => (
     </div>
   </div>
 );
+
 function App() {
   const [view, setView] = React.useState(sobre);
   return (
@@ -163,6 +164,8 @@ function App() {
               GitHub
             </a>
           </div>
+
+          
           <div className="flex justify-around text-white w-full p-4">
             <button
               onClick={() => setView(sobre)}
@@ -172,7 +175,7 @@ function App() {
             </button>
             <button
               onClick={() => setView(skils)}
-              className="border p-2 w-1/5 hover:scale-125 ease-in duration-300"
+              className="border p-2 w-1/5  hover:scale-125 ease-in duration-300"
             >
               Habilidades
             </button>

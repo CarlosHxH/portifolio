@@ -43,7 +43,7 @@ const projetos = () => (
 );
 const contato = () => {
   const Card = ({img,title,subtitle, href})=>(
-  <div className="w-full text-center">
+  <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 text-center">
       <img className="mx-auto rounded-full bg-gray-600 p-4" src={img} alt=""/>
       <a href={href} target="_black" rel="noopener noreferrer">
         <p>{title}</p>
@@ -52,7 +52,7 @@ const contato = () => {
     </div>
   )
   return (
-    <div className="grid grid-rows-2 grid-flow-col gap-4 text-white">
+    <div className="flex flex-wrap text-white justify-center">
       <Card img={"icons/mail.svg"} title={'E-mail'} subtitle={'carlosdaniel.prog@gmail.com'} href={"mailto:carlosdaniel.prog@gmail.com"}/>
       <Card img={"icons/phone.svg"} title={'E-mail'} subtitle={'(65) 99296-9922'} href="https://wa.me/5565992969922"/>
       <Card img={"icons/linkedin.svg"} title={'Linkedin'} subtitle={'@carlos-daniel-alves-dias-27a31311'} href="https://www.linkedin.com/in/carlos-daniel-alves-dias-27a313112/"/>
@@ -113,7 +113,7 @@ const SubLink = ()=>(
 function App() {
   const [view, setView] = React.useState(sobre);
   return (
-    <div className="container-fluid relative h-dvh w-full bg-slate-800 p-2">
+    <div id="particles-js" className="container-fluid relative h-dvh w-full bg-slate-800 p-2">
       <div className="p-4">
         <div className="flex justify-between">
           <p className="text-xl text-white">

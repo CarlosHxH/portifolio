@@ -99,6 +99,17 @@ const Banner = ({ title, img, href }) => (
   </div>
 );
 
+const SubLink = ()=>(
+    <div className="text-center">
+      <a className="link" href="https://www.linkedin.com/in/carlos-daniel-alves-dias-27a313112/" target="_blank" rel="noopener noreferrer">
+        Linkdin
+      </a>
+      &nbsp;|&nbsp;
+      <a className="link" href="https://github.com/CarlosHxH" target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+    </div>
+)
 function App() {
   const [view, setView] = React.useState(sobre);
   return (
@@ -115,51 +126,29 @@ function App() {
           {view}
         </div>
 
+
         <div className="bg-black-500  mt-[5rem] text-white fixed bottom-5 w-full p-4">
-          <div className="text-center">
-            <a
-              className="link"
-              href="https://www.linkedin.com/in/carlos-daniel-alves-dias-27a313112/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Linkdin
-            </a>
-            &nbsp;|&nbsp;
-            <a
-              className="link"
-              href="https://github.com/CarlosHxH"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-          </div>
-
-
+          <SubLink/>
           <div className="flex justify-around text-white w-full p-4">
             <button
               onClick={() => setView(sobre)}
-              className="border p-2 w-1/5 hover:scale-125 ease-in duration-300"
+              className="border p-2 min-w-1/5 hover:scale-125 ease-in duration-300"
             >
               Sobre mim
             </button>
             <button
               onClick={() => setView(skils)}
-              className="border p-2 w-1/5  hover:scale-125 ease-in duration-300"
+              className="border p-2 min-w-1/5  hover:scale-125 ease-in duration-300"
             >
               Habilidades
             </button>
             <button
               onClick={() => setView(projetos)}
-              className="border p-2 w-1/5 hover:scale-125 ease-in duration-300"
+              className="border p-2 min-w-1/5 hover:scale-125 ease-in duration-300"
             >
               Projetos
             </button>
-            <button
-              onClick={() => setView(contato)}
-              className="border p-2 w-1/5 hover:scale-125 ease-in duration-300"
-            >
+            <button onClick={() => setView(contato)} className="border p-2 min-w-1/5 hover:scale-125 ease-in duration-300">
               Contato
             </button>
           </div>
